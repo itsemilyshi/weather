@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="icon" href="/img/someimage.jpg">
+</head>
+<style>
+    .poweredBy {
+        color: #666666;
+        border-top: 1px solid #eea67a;
+        margin-top: 16px;
+        padding: 16px 0;
+        font-size: 10px;
+    }
+    form {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    .poweredBy a {
+        color: #eea67a;
+        text-decoration: none;
+    }
+    .poweredBy a:hover, .poweredBy a:active {
+        color: coral;
+    }
+    .weatherSearch {
+        position: sticky;
+        top: 0;
+    }
+    .weatherInput {
+        width: 200px;
+        height: 40px;
+        font-size: 22px;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        border-radius: 10px;
+    }
+    .weatherInput:focus {
+        border: 3px solid #ff6c31;
+    }
+    .searchButton {
+        height: 50px;
+        font-size: 22px;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+    }
+    .searchButton:hover {
+        background-color: #ff6c31;
+    }
+    li a.weather {
+        background-color: #ff6c31;
+    }
+    li a.weather:hover {
+        background-color: #ff6c31;
+    }
+    .weatherContainer {
+        position: relative;
+        width: 50%;
+    }
+
+    .weatherImage {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .weatherContainer:hover .weatherOverlay {
+        bottom: 0;
+        height: 100%;
+    }
+    .weatherOverlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ff6c31;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
+    }
+    .weatherText {
+        white-space: nowrap;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+</style>
+
+<body>
+
+<div class="main-content">
+    {{>header}}
+    <p>Please enter a location in the field below.</p>
+    <form id="weatherSearch" class="weatherSearch">
+        <input class = "weatherInput" id= "weatherInput" placeholder="Location">
+        <button class="searchButton">Search</button>
+    </form>
+
+    <p class="weatherMessage" id="weather-message-1"></p>
+    <div class="weatherContainer">
+    <img class="weatherImage" id="weatherImage">
+        <div class="weatherOverlay">
+            <div class="weatherText">some text goes here</div>
+        </div>
+    </div>
+    <p class="weatherMessage" id="weather-message-2"></p>
+    <p class="weatherMessage" id="weather-message-3"></p>
+
+    <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+    <p class="poweredBy"> Powered by <a href="https://darksky.net/poweredby/">Dark Sky</a>, <a href="http://mapbox.com/about/maps">Mapbox</a> and <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></p>
+    <button>button</button>
+
+</div>
+
+{{>footer}}
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

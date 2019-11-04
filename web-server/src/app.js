@@ -21,8 +21,7 @@ app.use(express.static(pubPath));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'cool and new weather website',
-        name: 'Emily Shi'
+        title: 'Emily Shi',
     })
 });
 
@@ -30,33 +29,25 @@ app.get('/help', (req, res) => {
     res.render('help', {
         help: 'oh nooooooooooooo',
         title: 'Help',
-        name: 'emily'
     })
 });
 
 app.get('/about',(req, res) => {
     res.render('about', {
-        title: 'about title',
-        name: 'Emily Shi'
-    })
-});
-
-app.get('/products', (req, res) => {
-    if(!req.query.search) {
-        return res.send({
-            error: 'you gotta provide a search term'
-        })
-    }
-    console.log(req.query.search);
-    res.send({
-        products: []
+        title: 'About',
     })
 });
 
 app.get('/weather', (req, res) => {
+    res.render('weather', {
+        title: 'Weather',
+    })
+});
+
+app.get('/weather/json', (req, res) => {
     if(!req.query.address) {
         return res.send({
-            error: 'you gotta provide an address'
+            error: 'Please provide an address'
         })
     }
     geocode(req.query.address, (error, {latitude, longitude, location} = {}) => {

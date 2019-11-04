@@ -1,5 +1,5 @@
 body {
-    color: coral;
+    color: #a04833;
     font-family: "American Typewriter";
     max-width: 650px;
     margin: 0 auto;
@@ -23,6 +23,8 @@ footer {
 }
 
 header {
+    color: coral;
+    font-family: "American Typewriter";
     margin-top: 16px;
     margin-bottom: 48px;
 }
@@ -36,6 +38,19 @@ header a {
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
+}
+
+header a:hover {
+    color: coral;
+}
+
+footer a {
+    text-decoration: none;
+    color: #eea67a;
+}
+
+footer a:hover {
+    color: coral;
 }
 
 .portrait {
@@ -53,4 +68,8 @@ button {
     background: coral;
     color: white;
     padding: 8px;
+}
+
+p {
+    font-size: 1em;
 }
