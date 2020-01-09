@@ -1,4 +1,14 @@
-# weather
-aaa
+# Weather Forecast App
 
-please don't flag me this is a private repo
+Node.js backend
+HTML, CSS, Javascript frontend
+
+# Future Stuff
+
+Better frontend (probably React)
+
+Images for the weather
+
+  - will have to create own vectors or use boring clipart
+  
+Show hourly, 7 day forecast and not just current time
