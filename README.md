@@ -3,6 +3,8 @@
 Node.js backend
 HTML, CSS, Javascript frontend
 
+Used this project to learn Node
+
 # Future Stuff
 
 Better frontend (probably React)
